@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-bg: #09090b;
+  --color-industrial-surface: #18181b;
+}
+
+/* Re-apply global styles using the new syntax if needed, or standard CSS */
+body {
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-100);
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+}
+
+/* Map v3 classes if they were missing, but v4 should have zinc */
+/* If zinc is missing, use gray/neutral or define manual zinc colors */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-zinc-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-zinc-700);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-zinc-600);
+}

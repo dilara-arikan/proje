@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>RobotChatUI</RootNamespace>
+    <AssemblyName>RobotChatUI</AssemblyName>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- ROS2 C# Client -->
+    <PackageReference Include="rcldotnet" Version="0.1.0" />
+    
+    <!-- Logging & Configuration -->
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.0" />
+    
+    <!-- OpenCV for Image Processing & QR Detection -->
+    <PackageReference Include="OpenCvSharp4" Version="4.8.1.26" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.8.1.26" />
+    
+    <!-- Serialization -->
+    <PackageReference Include="System.Text.Json" Version="8.0.0" />
+    
+    <!-- SignalR Client (for external integration if needed) -->
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="8.0.0" />
+    
+    <!-- Security & Networking -->
+    <PackageReference Include="System.Security.Cryptography" Version="4.3.0" />
+    <PackageReference Include="System.Net.Security" Version="4.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Services\RobotConnectors\" />
+    <Folder Include="Services\Chat\" />
+    <Folder Include="Views\Components\" />
+  </ItemGroup>
+
+</Project>
