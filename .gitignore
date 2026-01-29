@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# Archive & C# projects
+archive/
+csharp-chat/
+RobotChatUI/
+*.csproj
+obj/
+bin/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
